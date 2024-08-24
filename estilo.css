@@ -1,0 +1,16 @@
+body{
+	margin: 0px auto;
+	padding: 0px;
+	width: 1000px;
+}
+h1{
+	color: darkblue;
+	font-size: 20pt;
+}
+h2{
+	color: darkblue;
+	font-size: 18pt;
+}
+p{
+	background: gray;
+}

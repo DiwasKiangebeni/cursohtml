@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Meu Site</title>
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+<body>
+	<h1>HTML: o que é, a importância para a Web, como aprender e um Guia para iniciantes</h1>
+	<img src="html.webp" width="1000">
+
+<div>
+	<p>
+		<h2>Introdução</h2>
+		Ao entrar em sites de notícias, redes sociais, sistemas de bancos, entre outros, temos vários elementos que são disponibilizados na tela e que possibilitam a interação do usuário. Mas você já pensou em como isso tudo foi construído?
+	</p>
+	<p>
+		<img src="html.webp" width="700">
+	</p>
+</div>
+<div>
+	História
+Evolução do HTML
+O HTML foi desenvolvido por Tim Berners-Lee no CERN (Organização Europeia para a Pesquisa Nuclear), com auxílio do ambiente de desenvolvimento NeXTSTEP, e inicialmente era uma coleção de ferramentas para lidar com as pesquisas e a comunicação entre seu criador e outras pessoas.
+
+Com a evolução da internet, a solução foi ganhando atenção mundial. As primeiras versões eram flexíveis, e isso ajudava iniciantes na área. Com o tempo, a estrutura foi ficando mais rígida, mas até hoje os navegadores conseguem interpretar páginas web feitas da maneira antiga através da retrocompatibilidade.
+
+Formalmente, as especificações foram definidas somente na década de 1990. Em seguida, começou a evolução do HTML, sendo criado um grupo de trabalho para o HTML que, em 1995, publicou a versão HTML 2.0. No final de 1997 foi lançada a versão HTML 3.5 e, com ela, o grupo de trabalho da W3C começou a focar no desenvolvimento do XHTML. Continuaram com o lançamento das versões HTML 4.01 em 1999, do XHTML em 2000, e finalmente chegamos em 2014, momento em que é lançado o HTML5, que é utilizado até hoje, assim como suas atualizações.
+
+Vimos que foram lançadas várias versões do HTML até chegarmos àquela que utilizamos hoje, mas qual a diferença entre o HTML e HTML5?
+
+Diferença entre o HTML e HTML5
+Nas versões mais antigas a estruturação de conteúdo era feita principalmente por elementos genéricos, como <div> e <span>. No HTML5 temos tags semânticas que se referem ao objetivo do elemento como <header> para o cabeçalho, <footer> para o rodapé, <section> para separar seções, entre outras.
+
+Além disso, hoje, com o HTML5 temos suporte nativo para áudio e vídeo, podendo incorporá-los diretamente na página. Formulários também conseguem abranger mais tipos de campos na nova versão: agora temos disponíveis campos de email, número, data e especificações que geram validações nativas nos elementos.
+
+Vamos conferir como seria feito o código de uma página com um formulário em HTML5? Não se preocupe se não entender todas as tags agora, exploraremos melhor ao longo do artigo:
+
+    <header>
+        <h1>Meu Site</h1>
+    </header>
+
+    <main>
+        <h2>Dados de usuário</h2>
+        <form>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="data">Data:</label>
+            <input type="date" id="data" name="data" required>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Meu Site</p>
+    </footer>
+Note que estamos delimitando as principais partes do nosso site em: cabeçalho (<header>), conteúdo principal (<main>) e rodapé (<footer>). Além disso, no conteúdo principal, temos um formulário (<form>) com alguns campos que a pessoa usuária pode digitar (<input>).
+
+Esses campos possuem atributos, como type="email" e type="date", que indicam que esse campos aceitam apenas textos nos formatos de email e de data, respectivamente. Caso esses formatos não sejam respeitados, o formulário mostrará mensagens de alerta e ele não poderá ser submetido.
+
+Esses são apenas alguns dos recursos introduzidos no HTML5. Para deixar mais claro as suas vantagens, o mesmo código acima seria escrito da seguinte forma utilizando uma versão mais antiga do HTML:
+
+    <div>
+        <h1>Meu Site</h1>
+    </div>
+
+    <div>
+        <h2>Dados de usuário</h2>
+
+        <form>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
+
+            <label for="data">Data:</label>
+            <input type="text" id="data" name="data" required>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <div>
+        <p>&copy; 2024 Meu Site</p>
+    </div>
+Perceba que as tags <header>, <main> e <footer> não estão mais presentes, e estão sendo utilizadas tags <div> no lugar. Além disso, as tags <input> estão com os atributos type="text", que não verificam o formato do texto inserido.
+
+A tag <div> possui valor semântico muito menor que as tags do HTML5, ou seja, ela possui menos significado e não indica bem o seu tipo de conteúdo. Isso prejudica a acessibilidade do site para quem utiliza tecnologias assistivas, além de comprometer o SEO, uma técnica que deixa o seu site mais visível para mecanismos de busca como o Google. Falaremos melhor sobre HTML semântico, acessibilidade e SEO na próxima sessão!
+
+Além disso, os navegadores modernos já utilizam a versão 5 do HTML. Por conta disso, atualmente, o termo “HTML” é utilizado como sinônimo de “HTML5”, justamente por essa versão já ser consolidada na construção de sites.
+
+Dessa forma, é recomendado que, quando você começar a estudar e praticar HTML, você comece a escrever suas primeiras linhas de código já utilizando as tags atualizadas do HTML5, pois essa versão é a que conta com as melhores práticas de desenvolvimento e uso de tags apropriadas, fornecendo vários benefícios para a construção de sites, como acessibilidade e SEO.
+
+Entretanto, é importante saber que o HTML5 não é uma versão estática. Ainda hoje ele é desenvolvido e aprimorado, com funcionalidades e recursos sendo adicionados de tempos em tempos.
+
+HTML semântico
+O HTML semântico é uma abordagem no desenvolvimento web que enfatiza o uso correto e significativo dos elementos, escolhendo aqueles que melhor descrevem o conteúdo que está sendo apresentado.
+
+Por exemplo, em vez de usar um <div> genérico para todo o conteúdo, é preferível usar elementos mais específicos, como <header>, <nav>, <main>, <article>, <section>, <footer>, entre outros, de acordo com a estrutura e a natureza do conteúdo. Isso é utilizado para melhorar a SEO (Search Engine Optimization) e a acessibilidade da página. Muitas tags introduzidas no HTML5 foram criadas com o intuito de termos mais tags semânticas à nossa disposição, pois elas fornecem esses benefícios na construção de sites.
+
+Uma das principais características dessa abordagem é a importância dos cabeçalhos, que são representados pelos elementos <h1> a <h6>, sendo essenciais para indicar a hierarquia do conteúdo. Os sites de pesquisa dão importância aos cabeçalhos e por isso é um ponto de foco.
+
+O texto alternativo em imagens é crucial tanto para a acessibilidade quanto para o SEO. Tendo o cuidado de inserir o atributo alt nas tags de imagem, fornecendo um texto descritivo, isso permite que leitores de tela leiam o texto e que sites de pesquisa considerem esse texto ao classificar as páginas.
+
+Ainda sobre textos no contexto de semântica, é importante usar links descritivos em vez de genéricos. Por exemplo, em vez de construir um link com “clique aqui”, escreva um texto que deixe claro o destino desse link.
+
+Para aprimorar a questão de acessibilidade do seu site é possível usar o WAI-ARIA, um conjunto de atributos e propriedades que fornece recursos adicionais para descrever a função, o estado e o comportamento dos elementos, como menus, formulários, carrosséis e outros, tornando-os mais compreensíveis para leitores de tela.
+
+Ao aplicar essas práticas, você cria páginas amigáveis para sites de busca, como o Google, e acessíveis para todos os usuários. Isso resulta em:
+
+Melhor experiência do usuário;
+Maior alcance do público; e
+Uma web mais inclusiva.
+HTML vs XML: quais são as diferenças?
+Tanto o XML (Extensible Markup Language) quanto o HTML são linguagens de marcação utilizadas na web, mas, apesar disso, possuem propósitos e estrutura diferentes.
+
+O XML é projetado para representar informações de forma hierárquica e legível, tanto para humanos quanto máquinas, não se preocupando com a apresentação visual nem tendo uma estrutura pré-definida, mas com a descrição da estrutura dos dados de forma consistente e portável. No Brasil, é o formato mais utilizado na emissão de notas fiscais.
+
+Já o HTML é específico para a criação e apresentação de conteúdos em páginas web, sendo mais restrito por ter elementos e estrutura pré-definida, concentrando-se na apresentação visual e como os elementos devem ser exibidos no navegador. É comumente utilizado na construção de sites.
+
+Podemos considerar que as principais diferenças são: enquanto o XML é usado para armazenar e transportar dados, o HTML é utilizado para criar páginas web com conteúdo formatado e que possibilita a interação.
+
+Como funciona o HTML?
+Como dito anteriormente, o HTML é utilizado para estruturar e formatar o conteúdo de páginas web através de tags, que serão interpretadas pelo navegador. Para que seja possível essa interpretação, é importante declarar qual a versão do HTML será usada.
+
+Essa declaração é feita através do <!DOCTYPE html>, garantindo que o navegador interprete corretamente o código. É importante observar que isso não é uma tag HTML, e sim uma instrução para o navegador que deve ser colocada no início do documento sem espaços entre ela.
+
+DOM
+A representação estruturada do conteúdo HTML de uma página web é feita através do DOM (Document Object Modal), que é uma interface de programação que permite o acesso e manipulação dos elementos. É o DOM que faz a estruturação em forma de árvore dos elementos, em que cada um deles é representado por um nó organizado hierarquicamente de acordo com a estrutura do documento.
+
+Podemos analisar um exemplo de código em HTML para exibição de uma frase na tela:
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Aprendendo HTML</title>
+  </head>
+  <body>
+    <h1>Olá, mundo!</h1>   
+    <p>Este é o meu primeiro projeto HTML</p>
+  </body>
+</html>
+A estrutura do DOM seria a seguinte:
+
+Fluxograma que se inicia com o elemento html, que direciona para o elemento head e o elemento body. O elemento head direciona para o elemento title, e o elemento body direciona para os elementos h1 e p.
+<html>: é o elemento raiz da página, portanto, de maneira hierárquica, está acima de todos;
+<head>: se refere à “cabeça” da página, onde é possível inserir configurações que auxiliam na renderização, assim como o título da página. Ele está dentro do elemento <html>, portanto, é um elemento filho dele;
+<title>: define o título da página, aquele que ficará visível na aba do navegador. É uma ramificação do <head>, sendo um elemento filho;
+<body>: é o “corpo” da página, onde serão inseridos todos os elementos visuais que deverão aparecer, como os textos. Ele também está hierarquicamente inserido dentro do <html>, portanto, é filho dele;
+<h1>: refere-se ao título principal que ficará visível no corpo da página. Como está dentro do <body>, consequentemente pode ser considerado como filho;
+<p>: constrói um parágrafo de texto de acordo com o conteúdo inserido dentro dele. Também está dentro do body, portanto é filho dele e irmão do <h1>.
+Assim, podemos visualizar que o DOM é uma representação em forma de árvore do conteúdo inserido no HTML e que, ao criar um nó para cada elemento, permite que eles sejam acessados por meio do JavaScript.
+
+IDEs para HTML
+As IDEs (Integrated Development Environments, em português, ambiente de desenvolvimento integrado) são programas para computador que possuem ferramentas para auxiliar no desenvolvimento de software. Existem várias disponíveis para desenvolver em HTML, sendo as principais:
+
+Visual Studio Code: desenvolvida pela Microsoft, possui suporte nativo para HTML e tem uma variedade de plugins disponíveis para melhorar a produtividade;
+Sublime Text: é um editor de código que se destaca por ser leve e personalizável, que também possui suporte nativo para HTML. Caso você queira saber mais sobre esses editores e outros, assim como uma comparação entre qual utilizar, confira o artigo Sublime, Atom ou VSCode: qual melhor editor de código?
+Tags e elementos mais utilizados
+Os princípios básicos para fazer um site em HTML fazem parte da seguinte estrutura inicial:
+
+<html>
+  <head>
+    <title>Aprendendo HTML</title>
+  </head>
+  <body>
+  </body>
+</html>
+Sendo:
+
+<html> responsável por definir o início e fim do documento HTML;
+<head> define as informações do documento;
+<title> é o título da página;
+<body> é onde constará todo conteúdo visível da página.
+Tendo isso, você pode desbravar os elementos disponibilizados pelo HTML para construir sua página:
+
+Elementos em linha
+Elementos em linha, também conhecidos como inline, são elementos que ocupam somente a largura do seu conteúdo, como as tags:
+
+<a>: é possível definir links com essa tag;
+<span>: é um container genérico para agrupar textos;
+<br>: cria uma quebra de linha;
+<img>: insere imagens no site;
+<audio>: insere áudios no site.
+Caso você queira saber mais sobre elementos em linha e visualizar exemplos reais, acesse o artigo O que é o HTML e suas tags? Parte 2: elementos inline.
+
+Elementos em bloco
+Elementos em bloco, ou elementos block level, são elementos que ocupam todo o espaço do seu elemento pai. Por exemplo, as tags:
+
+<header>: define o cabeçalho da página;
+<main>: define o conteúdo principal da página;
+<footer>: define o rodapé da página;
+<section>: representa uma seção dentro do conteúdo principal;
+<article>: inclui um artigo na página;
+<aside>: faz referência a um outro conteúdo da página;
+<nav>: cria o menu de navegação;
+<div>: é como uma divisão na página para fins estéticos;
+<p>: representa um parágrafo;
+<h1>: define os títulos da página e se inicia no <h1> e vai até o <h6>;
+<hr>: constrói uma linha horizontal;
+<video>: insere vídeos no site.
+Para aprender mais sobre essas tags e conhecer exemplos, leia o artigo O que é o HTML e suas tags? Parte 3: elementos block-level.
+
+Qual é a diferença entre div e span?
+Ao citar os elementos <div> e <span>, podemos notar que sua definição é semelhante: um container. A diferença entre eles é que a <div> é um elemento de bloco, então, por padrão, ocupa toda a largura disponível horizontalmente, enquanto o <span> é um elemento em linha, ocupando somente o espaço necessário para seu conteúdo.
+
+Uma dica para saber quando usar cada um deles é: a <div> é mais utilizada para estruturar e organizar seções da página, enquanto o <span> é utilizado para aplicar estilos ou manipular partes menores de um texto ou conteúdo.
+
+Imagens no HTML
+É possível inserir imagens em uma página através da tag <img>, que por se tratar de um elemento vazio não precisa de uma tag de fechamento. Um exemplo de uso é:
+
+<img src="caminho_da_imagem.jpg" alt="Descrição da imagem">
+Os atributos básicos que devem ser utilizados nessa tag são:
+
+src: para referenciar o caminho ou URL da imagem. Você pode utilizar tanto uma imagem do seu computador quanto uma imagem encontrada na web, através da sua URL;
+alt: para inserir um texto alternativo, que é exibido caso a imagem não carregue e também para fins de acessibilidade, isto é, caso o usuário esteja usando um leitor de tela, o texto alternativo será lido para ele.
+Além desses atributos, podemos definir a largura (width) e a altura (height) da imagem diretamente na tag:
+
+<img src="caminho_da_imagem.jpg" alt="Descrição da imagem" width="300" height="200"">
+Também temos como trabalhar com imagens responsivas através das tags <picture>, <source> e o atributo srcset, que você pode conhecer sobre acessando o artigo Srcset: Trabalhando com imagens responsivas.
+
+Tipos de texto
+Seja para escrever títulos, subtítulos, texto simples ou listas, no HTML temos elementos específicos para isso.
+
+Referente aos títulos, temos os cabeçalhos, que são usados para estruturar o conteúdo da página e fornecer uma hierarquia visualmente clara. O cabeçalho mais importante é o <h1>, que geralmente é usado para o título principal da página. O <h2> é usado para subtítulos de seções importantes, o <h3> para subseções e assim por diante até o <h6>. Por exemplo:
+</div>
+
+</body>
+</html>
